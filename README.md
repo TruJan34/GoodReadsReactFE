@@ -1,5 +1,7 @@
 Its front end developed in ReactJS for GoodReads book search by title and see particular book details.
 
+Snapshots of the running app can be found in "Output" word document. 
+
 Steps to run this.
 
 First Run the code in "GoodReadsAPI" Repository. follow steps in its README.md.
