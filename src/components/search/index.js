@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createSearch } from '../actions/bookActions';
-import BookListComponent from './booklist';
-import BookInfoComponent from './bookInfo';
+import { createSearch } from '../../actions/bookActions';
+import BookListComponent from '../booklist';
+import BookInfoComponent from '../bookInfo';
 class SearchComponent extends Component {
   constructor(props) {
     super(props);

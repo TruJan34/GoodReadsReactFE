@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { CLEAR_SELECT } from '../actions/types';
 
 class BookInfoComponent extends Component {
   render() {

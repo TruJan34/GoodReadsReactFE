@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getBook } from '../actions/bookActions';
+import { getBook } from '../../actions/bookActions';
 
 class BookListComponent extends Component {
   constructor(props) {
