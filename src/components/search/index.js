@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { createSearch } from '../../actions/bookActions';
 import BookListComponent from '../booklist';
 import BookInfoComponent from '../bookInfo';
-class SearchComponent extends Component {
+
+export class SearchComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,7 +27,7 @@ class SearchComponent extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>Search Book</h1>
         <form onSubmit={this.onSubmit}>
           <div>
@@ -56,8 +57,8 @@ class SearchComponent extends Component {
         {!this.props.loading && this.props.selectedBook && (
           <BookInfoComponent />
         )}
-        <div>{this.props.error}</div>
-      </div>
+        <h5>{this.props.error}</h5>
+      </React.Fragment>
     );
   }
 }
@@ -66,7 +67,6 @@ SearchComponent.propTypes = {
   createSearch: PropTypes.func.isRequired
 };
 const mapStateToProps = state => {
-  debugger;
   return {
     booksList: state.books.booksList,
     loading: state.books.loading,

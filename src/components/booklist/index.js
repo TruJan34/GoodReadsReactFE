@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getBook } from '../../actions/bookActions';
 
-class BookListComponent extends Component {
+export class BookListComponent extends Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -35,7 +35,6 @@ BookListComponent.propTypes = {
   getBook: PropTypes.func.isRequired
 };
 const mapStateToProps = state => {
-  debugger;
   return {
     booksList: state.books.booksList,
     loading: state.books.loading,
