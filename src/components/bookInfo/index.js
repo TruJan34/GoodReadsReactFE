@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class BookInfoComponent extends Component {
+export class BookInfoComponent extends Component {
   render() {
     const rate =
       'rating-static rating-' +
@@ -44,7 +44,6 @@ class BookInfoComponent extends Component {
 }
 
 const mapStateToProps = state => {
-  debugger;
   return {
     booksList: state.books.booksList,
     loading: state.books.loading,
