@@ -4,7 +4,7 @@ const axios = require('axios');
 export const createSearch = searchKey => async dispatch => {
   dispatch({ type: LOADING });
   try {
-    const res = await axios.post('http://localhost:4000/search', { searchKey });
+    const res = await axios.post('https://murmuring-atoll-47071.herokuapp.com/search', { searchKey });
     if (res.data.GoodreadsResponse.search.results.work) {
       dispatch({
         type: SEARCH_BOOK,
@@ -25,7 +25,7 @@ export const createSearch = searchKey => async dispatch => {
 export const getBook = book => async dispatch => {
   dispatch({ type: LOADING });
   try {
-    const res = await axios.post('http://localhost:4000/book', { book });
+    const res = await axios.post('https://murmuring-atoll-47071.herokuapp.com/book', { book });
     if (res.data.GoodreadsResponse.book) {
       dispatch({
         type: BOOK_SELECT,

@@ -56,7 +56,7 @@ describe('bookActions test case', () => {
   });
 
   it('createSearch - should dispatch LOADING and SEARCH_BOOK action in case of success', () => {
-    moxios.stubRequest('http://localhost:4000/search', {
+    moxios.stubRequest('https://murmuring-atoll-47071.herokuapp.com/search', {
       status: 200,
       response: mockDataWithBooks
     });
@@ -71,7 +71,7 @@ describe('bookActions test case', () => {
   });
 
   it('createSearch - should dispatch LOADING and ERROR action in case of book not found', () => {
-    moxios.stubRequest('http://localhost:4000/search', {
+    moxios.stubRequest('https://murmuring-atoll-47071.herokuapp.com/search', {
       status: 404,
       response: mockDataWithoutBooks
     });
@@ -85,7 +85,7 @@ describe('bookActions test case', () => {
   });
 
   it('getBook - should dispatch LOADING and BOOK_SELECT action in case of sucess while fetching book details', () => {
-    moxios.stubRequest('http://localhost:4000/book', {
+    moxios.stubRequest('https://murmuring-atoll-47071.herokuapp.com/book', {
       status: 200,
       response: mockBook
     });
@@ -101,7 +101,7 @@ describe('bookActions test case', () => {
   });
 
   it('getBook - should dispatch LOADING and ERROR action in case of error while fetching book details', () => {
-    moxios.stubRequest('http://localhost:4000/book', {
+    moxios.stubRequest('https://murmuring-atoll-47071.herokuapp.com/book', {
       status: 404,
       response: mockBookError
     });
